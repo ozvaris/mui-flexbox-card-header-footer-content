@@ -1,0 +1,52 @@
+{
+    "env": {
+        "browser": true,
+        "es2022": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:react/jsx-runtime",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "react-hooks", "@typescript-eslint"],
+    "rules": {
+        "react/function-component-definition": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            { "args": "none" }
+        ],
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/quotes": [
+            "error",
+            "single",
+            { "avoidEscape": true, "allowTemplateLiterals": false }
+        ],
+        "curly": ["error", "all"],
+        "eqeqeq": "error",
+        "prefer-arrow-callback": "error",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "react-hooks/exhaustive-deps": "warn",
+        "react-hooks/rules-of-hooks": "warn",
+        "react/display-name": "off",
+        "react/prop-types": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off"
+    }
+}
