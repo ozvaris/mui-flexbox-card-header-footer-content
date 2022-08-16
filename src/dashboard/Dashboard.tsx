@@ -18,6 +18,7 @@ import {
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import * as React from 'react'
+import CardFlex from '../cardFlex/CardFlex'
 import DropDown from '../dropDown/DropDown'
 import SearchBox from '../search-box/SearchBox'
 import Chart from './Chart'
@@ -143,20 +144,15 @@ function DashboardContent() {
                 >
                     <Toolbar />
                     <Container maxWidth='lg' sx={{ mt: 4, mb: 4 }}>
-                        <Grid container spacing={3}>
-                            {/* Chart */}
-                            <Grid item xs={12} md={8} lg={6}>
-                                <Paper
-                                    sx={{
-                                        p: 2,
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        height: 240
-                                    }}
-                                >
-                                    <Chart />
-                                </Paper>
-                            </Grid>
+                        <Grid
+                            columns={5}
+                            container
+                            spacing={2}
+                            border={0}
+                        >
+                            <CardFlex xs={12} md={8} lg={2} xl={2}>
+                                <Chart />
+                            </CardFlex>
                             {/* Recent Deposits */}
 
                             <Grid item xs={12} md={4} lg={3}>
